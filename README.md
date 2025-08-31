@@ -1,5 +1,5 @@
-# Week 1 
-## Basics of C language, with <cs50.h> functions like: 
+## Week 1 
+Basics of C language, with <cs50.h> and <stdio.h> functions:
 - string name = get_string("What's your name? "),
 - if-else statements,
 - for loops,
