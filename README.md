@@ -7,5 +7,3 @@ In this section I learned about:
 - Bubble Sort
 - Merge Sort
 - Recursion
-
-And used <ctypes.h> and <string.h> function libraries to complete my projects.
