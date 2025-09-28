@@ -13,4 +13,4 @@ Int this section I learned about:
 - scanf
 - File I/O
 
-And to use filters in filter-more file enter "./filter -g images/input_image_name.bmp output_image_name.bmp" in the terminal, where -g is for grayscale, -r is for reflection, -b is for blur and -e is for edges.
+To try filters in filter-more file enter "./filter -g images/image_name.bmp output_name.bmp" in the terminal, where -g is for grayscale, -r is for reflection, -b is for blur and -e is for edges.
