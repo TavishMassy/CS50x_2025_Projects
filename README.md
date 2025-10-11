@@ -3,7 +3,6 @@ In this section I learned about:
 - Data Structures
 - Queues
 - Stacks
-- Jack Learns the Facts
 - Resizing Arrays
 - Arrays
 - Linked Lists
