@@ -1,3 +1,4 @@
+## Week 4
 In this section I learned about:
 - Hexadecimal
 - Memory
