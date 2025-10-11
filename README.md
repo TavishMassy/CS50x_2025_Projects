@@ -1,4 +1,4 @@
-Int this section I learned about:
+In this section I learned about:
 - Hexadecimal
 - Memory
 - Pointers
