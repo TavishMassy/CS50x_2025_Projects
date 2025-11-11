@@ -1,4 +1,4 @@
-## Week 8
+## Week 8 Trivia
 In this section I learned about:
 - The Internet
 - Routers
