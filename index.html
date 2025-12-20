@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forensic BPA Automation (OpenRouter)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="static/styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>🔬Forensic BPA Automation</h1>
+            <p>Bloodstain Pattern Analysis powered by NVIDIA Nemotron (via OpenRouter)</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="section">
+            <div class="card">
+                <h2><span class="status-indicator" id="apiStatus"></span> User Credentials</h2>
+                <div class="input-group">
+                    <label for="apiKey">OpenRouter API Key</label>
+                    <input type="password" id="apiKey" placeholder="Enter your OpenRouter API key (sk-or-...)">
+                </div>
+                <p style="color: #888; font-size: 14px;">Your API key is stored locally and sent directly to OpenRouter's API.</p>
+            </div>
+
+            <div class="card">
+                <h2><span class="status-indicator" id="imageStatus"></span> Upload Evidence</h2>
+                <div class="file-upload" id="dropZone">
+                    <div id="uploadPlaceholder">
+                        <div class="file-upload-icon">🖼️</div>
+                        <p>Drag & drop an image here or <span style="color: #ff0;">click to browse</span></p>
+                        <p style="color: #888; font-size: 14px;">Supports JPG, PNG, WEBP</p>
+                    </div>
+                    <input type="file" id="imageInput" accept="image/*">
+                    <img id="previewImage" class="preview-image" style="display: none;">
+                </div>
+            </div>
+
+            <div class="error-message" id="errorMessage"></div>
+            <div style="text-align: center;">
+                <button class="btn" id="analyzeBtn" disabled>🔍 Analyze Bloodstain Pattern</button>
+            </div>
+
+            <div class="loading-container" id="loadingContainer">
+                <canvas id="particleCanvas" width="200" height="200"></canvas>
+                <p class="loading-text">🕵️ Analyzing bloodstain patterns with AI reasoning...</p>
+            </div>
+
+            <div class="results-container" id="resultsContainer">
+                <div style="text-align: center;">
+                    <button class="btn" onclick="resetAnalysis()">
+                        🔄 Analyze Another Image
+                    </button>
+                </div>
+                <br>
+                <div class="result-box">
+                    <h3>
+                        Forensic Report
+                        <button class="copy-btn" onclick="copyToClipboard('reportContent', this)">
+                            📋 Copy Report
+                        </button>
+                    </h3>
+                    <div style="color: #f00;">
+                        <h6>
+                            AI-generated content must be fact-checked and is not a substitute for professional judgment.
+                        </h6>
+                    </div>
+                    <pre id="reportContent"></pre>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>Forensic BPA Automation Tool | Powered by NVIDIA Nemotron (via OpenRouter)</p>
+        <p style="font-size: 12px;">For educational and research purposes only</p>
+    </footer>
+
+    <script src="static/script.js"></script>
+</body>
+</html>
