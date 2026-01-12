@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>C Webpage</title>
+    </head>
+
+    <body>
+        <div class="header">
+            <h2>C Language</h>
+        </div>
+        <div class="container">
+            <a class="link" href="./index.html">Go back to Notes. </a>
+        </div>
+        <br>
+        <div class="container">
+            <h3>Key Words</h3>
+            <hr>
+            <div class="section">
+                <h4>
+                    <li>
+                        <h3>int</h3>
+                        <div>The <code>int</code> keyword is used to declare integer type variables.</div>
+                        <div class="section">
+                            <div>For example:</div>
+                            <p>
+                            <pre>
+int count;
+                                </pre>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>for</h3>
+                        <div>There are three types of loops in C programming. The <code>for</code> loop is written in C
+                            programming using the keyword <code>for</code>.</div>
+                        <div class="section">
+                            <div>For example:</div>
+                            <p>
+                            <pre>
+for (i=0; i&lt;9;++i)
+{
+    printf("%d ",i);
+}
+                                </pre>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>if and else</h3>
+                        <div>In C programming, <code>if</code> and <code>else</code> are used to make decisions.</div>
+                        <div class="section">
+                            <div>For example:</div>
+                            <p>
+                            <pre>
+if (i == 1)
+   printf("i is 1.")
+else
+   printf("i is not 1.")
+                                </pre>
+                            </p>
+                            <div>If the value of i is other than 1, the output will be :</div>
+                            <p>
+                            <pre>
+i is not 1
+                                </pre>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>double and float</h3>
+                        <div>Keywords <code>double</code> and <code>float</code> are used for declaring floating type
+                            variables.</div>
+                        <div class="section">
+                            <div>For example:</div>
+                            <p>
+                            <pre>
+float number;
+double longNumber;
+                                </pre>
+                            </p>
+                        </div>
+                        <div>Here, number is a single-precision floating type variable whereas, longNumber is a
+                            double-precision floating type variable.</div>
+                    </li>
+                    <br>
+                    <li>
+                        <h3>do...while</h3>
+                        <div>
+                            <p>
+                            <pre>
+int i;
+do
+{
+   printf("%d ",i);
+   i++;
+}
+while (i&lt;10)
+                                </pre>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>const</h3>
+                        <div>An identifier can be declared constant by using the <code>const</code> keyword.</div>
+                        <div class="section">
+                            <div>For example:</div>
+                            <p>
+                            <pre>
+const int a = 5;
+                                </pre>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>char</h3>
+                        <div>The <code>char</code> keyword declares a character variable. </div>
+                        <div class="section">
+                            <div>For example:</div>
+                            <p>
+                            <pre>
+char alphabet;
+                                </pre>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>switch, case and default</h3>
+                        <div>The <code>switch</code> and <code>case</code> statement is used when a block of statements
+                            has to be executed among many blocks.</div>
+                        <div class="section">
+                            <div>For example:</div>
+                            <p>
+                            <pre>
+switch(expression)
+{
+    case '1':
+    //some statements to execute when 1
+    break;
+    case '5':
+    //some statements to execute when 5
+    break;
+    default:
+    //some statements to execute when default;
+}
+                                </pre>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>break and continue</h3>
+                        <div>The <code>break</code> statement terminates the innermost loop immediately when it's
+                            encountered. It's also used to terminate the switch statement.</div>
+                        <div>The <code>continue</code> statement skips the statements after it inside the loop for the
+                            iteration.</div>
+                        <div class="section">
+                            <div>For example:</div>
+                            <p>
+                            <pre>
+for (i=1;i&lt;=10;++i){
+   if (i==3)
+   continue;
+   if (i==7)
+   break;
+   printf("%d ",i);
+}
+                                </pre>
+                            </p>
+                            <div>Output</div>
+                            <p>
+                            <pre>
+1 2 4 5 6
+                                </pre>
+                            </p>
+                        </div>
+                        <div>When i is equal to 3, the continue statement comes into effect and skips 3. When i is equal
+                            to 7, the break statement comes into effect and terminates the for loop.</div>
+                    </li>
+                </h4>
+            </div>
+            <a class="link" href="./index.html">Go back to Notes. </a </div>
+    </body>
+
+</html>

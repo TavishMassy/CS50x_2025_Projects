@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <h2>History</h2>
+    <table class="table table-bordered table-striped">
+        <thead class="thead-light">
+            <tr>
+                <th>Type</th>
+                <th>Symbol</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>Total</th>
+                <th>Timestamp</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for transection in transections %}
+                <tr>
+                    <td>{{ transection.type }}</td>
+                    <td>{{ transection.symbol }}</td>
+                    <td>{{ transection.shares }}</td>
+                    <td>{{ transection.price | usd }}</td>
+                    <td>{{ (transection.price * transection.shares) | usd }}</td>
+                    <td>{{ transection.timestamp }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

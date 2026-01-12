@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+
+            // Waiting for page to fully load
+            document.addEventListener("DOMContentLoaded", (event) => {
+
+                // Constant for all buttons
+                const allButtons = document.getElementsByTagName("button");
+
+                // Costant for Q1 answer status
+                const q1correctMessage = document.getElementById("q1correct");
+                const q1incorrectMessage = document.getElementById("q1incorrect");
+
+                // Costant for Q2 answer status
+                const q2correctMessage = document.getElementById("q2correct");
+                const q2incorrectMessage = document.getElementById("q2incorrect");
+
+                // Constant for input value
+                const ans = document.getElementById('answer');
+
+                // Loop for checking answers
+                for (let i = 0; i < allButtons.length; i++) {
+                    const button = allButtons[i];
+
+                    // Button click listener
+                    button.addEventListener("click", function(event) {
+
+                        // Check for wether button pressed in Q2
+                        if (event.target.id !== "check") {
+
+                            // Resets all buttons to default
+                            for (let j = 0; j < allButtons.length; j++) {
+                                allButtons[j].style.backgroundColor = '';
+                            }
+
+                            // Clears ans status
+                            q1correctMessage.style.display = "none";
+                            q1incorrectMessage.style.display = "none";
+
+                            // Check for which button pressed in Q1
+                            if (event.target.id === "1p3s") {
+                                event.target.style.backgroundColor = "#d9ffed";
+                                q1correctMessage.style.display = "inline";
+                            } else {
+                                event.target.style.backgroundColor = "#ffd9ed";
+                                q1incorrectMessage.style.display = "inline";
+                            }
+                        } else {
+
+                            // Clears ans status
+                            q2correctMessage.style.display = "none";
+                            q2incorrectMessage.style.display = "none";
+
+                            // Cleans input value
+                            const cleanAns = ans.value.trim().toUpperCase()
+
+                            // Checks correctness
+                            if (cleanAns === "SWITZERLAND") {
+                                ans.style.backgroundColor = '#d9ffed';
+                                q2correctMessage.style.display = "inline";
+                            } else {
+                                ans.style.backgroundColor = '#ffd9ed';
+                                q2incorrectMessage.style.display = "inline";
+                            }
+                        }
+                    });
+                }
+            });
+        </script>
+    </head>
+
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>What is the approximate ratio of people to sheep in New Zealand? </h3>
+                <button id="6p1s">6 people per 1 sheep </button>
+                <button id="3p1s">3 people per 1 sheep </button>
+                <button id="1p1s">1 person per 1 sheep </button>
+                <button id="1p3s">1 person per 3 sheep </button>
+                <button id="1p6s">1 person per 6 sheep </button>
+                <div>
+                    <h4 id="q1incorrect" style="display: none;">Incorrect </h4>
+                    <h4 id="q1correct" style="display: none;">Correct! </h4>
+                </div>
+            </div>
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>In which country is it illegal to own only one guinea pig, as lone guinea pig might get lonely? </h3>
+                <input type="text" id="answer">
+                <button id="check">Check Answer </button>
+                <div>
+                    <h4 id="q2incorrect" style="display: none;">Incorrect </h4>
+                    <h4 id="q2correct" style="display: none;">Correct! </h4>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
